@@ -1,0 +1,28 @@
+:root {
+    --blue-wikipedia: #36c;
+    --font-grey: #54595d;
+    --white: #ffff;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+.header-container {
+    width: 100%;
+    min-width: 320px;
+    height: 550px;
+    background-color: grey;
+
+}
+.header-texlogo {
+    width: 100%;
+    height: 99px;
+    background-color: var(--white);
+
+
+}
