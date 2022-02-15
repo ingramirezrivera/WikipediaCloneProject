@@ -10,19 +10,87 @@
 }
 html {
     font-size: 62.5%;
-    font-family: sans-serif;
+    font-family: 'Courier New', Courier, monospace;
 }
-.header-container {
-    width: 100%;
-    min-width: 320px;
-    height: 550px;
-    background-color: grey;
+.body {
+    display: grid;
+    grid-template-rows: 160px 400px 700px 312px;
 
 }
-.header-texlogo {
+.header {
+    display: grid;
+    justify-items: center;
+}
+.logo {
+    margin-block-start: 48px;
+    width: 70%;
+    height: 52px;
+    display: grid;
+    grid-template-areas: 
+        "icon name"
+        "icon slogan"; 
+    grid-template-rows: 2fr 1fr; 
+    grid-template-columns: 1fr 3fr;
+}
+.logo .logo__icon {
+    grid-area: icon;
     width: 100%;
-    height: 99px;
-    background-color: var(--white);
+    
+}
+.logo .logo__name {
+    width: 90%;
+    justify-self: center;
+    grid-area: name;
 
-
+}
+.logo .logo__slogan {
+    width: 90%;
+    justify-self: center;
+    grid-area: slogan;
+}
+.search-bar {
+    display: grid;
+    grid-template-columns: 55% 1fr 35px 56px;
+    grid-template-rows: 1fr;
+    width: 95%;
+    height: 49px;
+    margin-top: 3px;
+    border: 1px solid #72777e;
+    
+}
+.input-search {
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    font-size: 2rem;
+    border: none;
+}
+.input-search:active {
+    border: var(--blue-wikipedia);
+}
+.search-icon {
+    display: grid;
+    grid-column: 4;
+    background-color: var(--blue-wikipedia);
+}
+.search-icon a {
+    display: grid;
+    place-items: center;
+}
+.search-icon img {
+    width: 50%;
+}
+.search-bar span {
+    margin-top: 5px;
+    grid-column: 3; 
+}
+.search-bar .arrow-icon {
+    align-self: center;
+}
+.search-bar .lenguage {
+    grid-column: 2;
+    justify-self: end;
+    align-self: center;
+    font-size: 1.6rem;
+    font-weight: 100;
 }
