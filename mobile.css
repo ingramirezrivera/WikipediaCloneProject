@@ -1,6 +1,7 @@
 :root {
     --blue-wikipedia: #36c;
     --font-grey: #54595d;
+    --gray: #a2a9b1;
     --white: #ffff;
 }
 *{
@@ -10,20 +11,23 @@
 }
 html {
     font-size: 62.5%;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: font-family: sans-serif;
 }
 .body {
     display: grid;
-    grid-template-rows: 160px 400px 700px 312px;
+    grid-template-rows: 160px 332px 700px 312px;
 
 }
 .header {
     display: grid;
     justify-items: center;
+    border-bottom: 1px solid black;
 }
 .logo {
     margin-block-start: 48px;
-    width: 70%;
+    margin-block-end: 10px;
+    width: 65%;
+    max-width: 220px;
     height: 52px;
     display: grid;
     grid-template-areas: 
@@ -44,53 +48,121 @@ html {
 
 }
 .logo .logo__slogan {
+    margin-block-start: -5px;
     width: 90%;
     justify-self: center;
+    align-self: flex-start;
     grid-area: slogan;
 }
 .search-bar {
-    display: grid;
-    grid-template-columns: 55% 1fr 35px 56px;
-    grid-template-rows: 1fr;
+    display: flex;
     width: 95%;
-    height: 49px;
-    margin-top: 3px;
-    border: 1px solid #72777e;
+    height: 48px;
+    max-width: 480px;
+    border: 1px solid #a2a9b1;
+    justify-items: center;
+    align-items: center;
+    border-radius: 3px;
+}
+.input-search {
+    border: none;
+}
+.search-bar p {
+    font-size: 1.4rem;
+    font-weight: 300;
     
+}
+.arrow-icon {
+    padding-right: 10px;
+}
+.search-icon {
+    display: flex;
+    width: 74px;
+    height: 100%;
+    background-color: var(--blue-wikipedia);
+}
+.search-icon a {
+    display: flex;
+    width: 100%;
+}
+.search-icon a img {
+    width: 30px;
+    margin: 0 auto;
 }
 .input-search {
     width: 100%;
     height: 100%;
     padding: 0 10px;
-    font-size: 2rem;
     border: none;
+    font-size: 1.8rem;
 }
-.input-search:active {
-    border: var(--blue-wikipedia);
+.search-bar input {
+    outline: unset;
 }
-.search-icon {
+.search-bar:hover {
+    border: 2px solid var(--blue-wikipedia);    
+}
+
+.header-nav {
+    width: 100%;
+    height: 100%;
+    
+}
+.primary-links {
     display: grid;
-    grid-column: 4;
-    background-color: var(--blue-wikipedia);
+    width: 100%;
+    max-width: 480px;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: auto;
+    justify-content: center;
+    justify-items: center;
+    color: var(--font-grey)
 }
-.search-icon a {
-    display: grid;
-    place-items: center;
+.link {
+    padding: 6px 15px;
 }
-.search-icon img {
-    width: 50%;
+.link p {
+    text-align: center;
+    padding: 4px 0;
+    font-family: sans-serif;
+    font-size: 1.5rem;
 }
-.search-bar span {
-    margin-top: 5px;
-    grid-column: 3; 
+.link .link-title {
+    font-weight: 700;
+    color: var(--blue-wikipedia);
 }
-.search-bar .arrow-icon {
-    align-self: center;
+.link-article {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
 }
-.search-bar .lenguage {
-    grid-column: 2;
-    justify-self: end;
-    align-self: center;
-    font-size: 1.6rem;
-    font-weight: 100;
+.link .link-text {
+    
+    font-size: 1.3rem;
+}
+.lenguage-selector {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+    width: 320px;
+    height: 38px;
+    background-color: #f8f9fa;
+    border: 1px solid var(--gray);
+}
+.lenguage-selector .button {
+    display: flex;
+    text-decoration: none;
+    color: var(--blue-wikipedia);
+    font-size: 1.4rem;
+    font-family: sans-serif;
+    font-weight: bold;
+    justify-items: center;
+    align-items: center;
+}
+.button .symbol {
+    padding: 0 10px;
+}
+.button .arrow {
+    padding: 10px;
 }
