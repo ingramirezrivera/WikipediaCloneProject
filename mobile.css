@@ -3,6 +3,7 @@
     --font-grey: #54595d;
     --gray: #a2a9b1;
     --white: #ffff;
+    --background-component: #f8f9fa;
 }
 *{
     margin: 0;
@@ -14,14 +15,23 @@ html {
     font-family: sans-serif;
 }
 .body {
+    width: 100%;
     display: grid;
-    grid-template-rows: 581px 332px 700px 312px;
+    grid-template-rows: 607px 1014px 1fr;
 
 }
 .header {
+    width: 95%;
     height: 580px ;
+    margin: 0 auto;
     display: grid;
     justify-items: center;
+    border-bottom: 1px solid var(--gray);
+    
+}
+.header-nav {
+    width: 100%;
+    height: 100%;   
 }
 .logo {
     margin-block-start: 48px;
@@ -102,12 +112,6 @@ html {
 .search-bar:hover {
     border: 2px solid var(--blue-wikipedia);    
 }
-
-.header-nav {
-    width: 100%;
-    height: 100%;
-    
-}
 .primary-links {
     display: grid;
     width: 100%;
@@ -166,21 +170,18 @@ html {
 .button .arrow {
     padding: 10px;
 }
-.hr {
-    margin: 0 auto;
-    height: 1px;
-    width: 90%;
-    margin-top: 25px;
-}
 .main {
     display: grid;
-    width: 92%;
+    width: 100%;
+    height: 956px;
     grid-template-rows: auto 1fr 1fr ;
+    grid-template-columns: 1fr;
     margin: 25px auto;
-    border-top: 1px solid var(--gray);
     padding-top: 10px;
+    justify-content: center;
 }
 .main .intro {
+    grid: 1;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -193,7 +194,7 @@ html {
     height: 50px;
 }
 .main .intro__text {
-    width: 100%;
+    width: 95%;
     margin-top: 5px;
     text-align: center;
     font-size: 1.4rem;
@@ -209,12 +210,12 @@ html {
     line-height: 20px;
 }
 .web-apps {
-    width: 100%;
     margin-top: 25px;
     max-width: 480px;
     height: auto;
     display: grid;
     grid-template-columns: 160px 160px;
+    justify-self: center;
 }
 .web-apps .web-app {
     display: grid;
@@ -239,12 +240,87 @@ html {
     line-height: 20px;
     color: var(--font-grey);
 }
+.download-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-component);
+}
+.download-section__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.download-section img {
+    width: 60px;
+    padding: 5px;
+}
+.download-section h2 {
+    font-size: 1.4rem;
+    color: var(--blue-wikipedia);
+}
+.download-section .download-section__text {
+    width: 100%;
+    margin: 5px;
+    padding: 0 10px;
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--font-grey);
+    line-height: 20px;
+}
+.download-section .donwload-section__img-links {
+    width: 80%;
+    display: grid;
+    margin: 8px 0;
+    grid-template-columns: 150px 150px;
+    justify-content: center;
+    align-items: center;
+}
+.donwload-section__img-links .img-link__google-play {
+    display: flex;
+    justify-content: end;
+}
+.donwload-section__img-links .img-link__google-play img {
+    grid-column: 1;
+    width: 90%;
+    max-height: 80px;
+    
+}
+.donwload-section__img-links .img-link__apple-store img {
+    grid-column: 2;
+    width: 80%;  
+}
+.footer {
+    width: 95%;
+    margin: 10px auto;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    font-size: 1.4rem;
+    line-height: 25px;
+    color: var(--font-grey);
+    border-top: 1px solid var(--gray);
+}
+.footer__p1 {
+    line-height: 25px;
+}
+.footer__p2 {
+    color: var(--blue-wikipedia);
+    text-decoration: none;
+    line-height: 20px;
+}
+.footer__links{
+    list-style: circle;
+    color: var(--blue-wikipedia);
+    text-decoration: none;
+    line-height: 25px;
+}
+.hr {
+    width: 90%;
+    margin-top: 20px;
+}
 
 
-<section class="web-apps">
-            <div class="web-app">
-                <img src="" alt="" class="web-app__image">
-                <p class="web-app__title"></p>
-                <p class="web-app__text"></p>
-            </div>
-        </section>
