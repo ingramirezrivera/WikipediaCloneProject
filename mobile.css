@@ -4,6 +4,7 @@
     --gray: #a2a9b1;
     --white: #ffff;
     --background-component: #f8f9fa;
+    --font-web: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 *{
     margin: 0;
@@ -12,7 +13,7 @@
 }
 html {
     font-size: 62.5%;
-    font-family: sans-serif;
+    font-family: -apple-system,Helvetica,Arial,sans-serif;
 }
 .body {
     width: 100%;
@@ -22,28 +23,28 @@ html {
 }
 .header {
     width: 95%;
-    height: 580px ;
+    height: 580px;
     margin: 0 auto;
     display: grid;
+    grid-template-rows: 100px 49px 318px;
     justify-items: center;
     border-bottom: 1px solid var(--gray);
-    
 }
 .header-nav {
     width: 100%;
     height: 100%;   
 }
 .logo {
-    margin-block-start: 48px;
+    margin-block-start: 46px;
     margin-block-end: 10px;
-    width: 65%;
+    width: 80%;
     max-width: 220px;
     height: 52px;
     display: grid;
     grid-template-areas: 
         "icon name"
         "icon slogan"; 
-    grid-template-rows: 2fr 1fr; 
+    grid-template-rows: 31px 1fr; 
     grid-template-columns: 1fr 3fr;
 }
 .logo .logo__icon {
@@ -59,15 +60,15 @@ html {
 }
 .logo .logo__slogan {
     margin-block-start: -5px;
-    width: 90%;
+    width: 86%;
     justify-self: center;
     align-self: flex-start;
     grid-area: slogan;
 }
 .search-bar {
     display: flex;
-    width: 95%;
-    height: 48px;
+    width: 98%;
+    height: 44px;
     max-width: 480px;
     border: 1px solid #a2a9b1;
     justify-items: center;
@@ -75,6 +76,11 @@ html {
     border-radius: 3px;
 }
 .input-search {
+    width: 100%;
+    height: 100%;
+    padding: 8px 12px;
+    border: none;
+    font-size: 1.5rem;
     border: none;
 }
 .search-bar p {
@@ -87,7 +93,7 @@ html {
 }
 .search-icon {
     display: flex;
-    width: 74px;
+    width: 86px;
     height: 100%;
     background-color: var(--blue-wikipedia);
 }
@@ -99,62 +105,64 @@ html {
     width: 30px;
     margin: 0 auto;
 }
-.input-search {
-    width: 100%;
-    height: 100%;
-    padding: 0 10px;
-    border: none;
-    font-size: 1.8rem;
-}
+
 .search-bar input {
     outline: unset;
 }
 .search-bar:hover {
     border: 2px solid var(--blue-wikipedia);    
 }
+
 .primary-links {
     display: grid;
     width: 100%;
+    height: 325px;
     max-width: 480px;
-    grid-template-columns: 1fr 1fr 1fr ;
-    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, 81px);
     justify-content: center;
     justify-items: center;
-    color: var(--font-grey)
+    color: var(--font-grey);
 }
 .link {
-    padding: 6px 15px;
+    padding: 12px 15px 11px 15px;
 }
 .link p {
     text-align: center;
-    padding: 4px 0;
-    font-family: sans-serif;
-    font-size: 1.5rem;
+    font-family: var(--font-web)
+    font-size: 1.4rem;
 }
 .link .link-title {
+    margin: 0 0 4px;
     font-weight: 700;
     color: var(--blue-wikipedia);
+    font-size: 1.4rem;
 }
 .link-article {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-
+    font-size: 1.3rem;
+}
+.link-number {
+    padding-top: 3px;
 }
 .link .link-text {
-    
     font-size: 1.3rem;
+    padding-top: 3px;
 }
 .lenguage-selector {
     display: flex;
     justify-content: center;
     margin: 15px;
-    width: 320px;
+    width: 260px;
     height: 38px;
     background-color: #f8f9fa;
     border: 1px solid var(--gray);
 }
 .lenguage-selector .button {
+    width: 284px;
+
     display: flex;
     text-decoration: none;
     color: var(--blue-wikipedia);
@@ -321,6 +329,6 @@ html {
 .hr {
     width: 90%;
     margin-top: 20px;
-}
+} 
 
 
