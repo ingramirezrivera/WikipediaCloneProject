@@ -18,12 +18,12 @@ html {
 .body {
     width: 100%;
     display: grid;
-    grid-template-rows: 607px 1014px 1fr;
+    grid-template-rows: 551px 995px 1fr;
 
 }
 .header {
     width: 95%;
-    height: 580px;
+    height: 552px;
     margin: 0 auto;
     display: grid;
     grid-template-rows: 100px 49px 318px;
@@ -37,14 +37,14 @@ html {
 .logo {
     margin-block-start: 46px;
     margin-block-end: 10px;
-    width: 80%;
+    width: 82%;
     max-width: 220px;
     height: 52px;
     display: grid;
     grid-template-areas: 
         "icon name"
         "icon slogan"; 
-    grid-template-rows: 31px 1fr; 
+    grid-template-rows: 33px 1fr; 
     grid-template-columns: 1fr 3fr;
 }
 .logo .logo__icon {
@@ -125,7 +125,7 @@ html {
     color: var(--font-grey);
 }
 .link {
-    padding: 12px 15px 11px 15px;
+    padding: 12px 10px 11px 0px;
 }
 .link p {
     text-align: center;
@@ -134,7 +134,7 @@ html {
 }
 .link .link-title {
     margin: 0 0 4px;
-    font-weight: 700;
+    font-weight: bold;
     color: var(--blue-wikipedia);
     font-size: 1.4rem;
 }
@@ -146,6 +146,7 @@ html {
 }
 .link-number {
     padding-top: 3px;
+    padding-right: 5px;
 }
 .link .link-text {
     font-size: 1.3rem;
@@ -154,38 +155,42 @@ html {
 .lenguage-selector {
     display: flex;
     justify-content: center;
-    margin: 15px;
-    width: 260px;
-    height: 38px;
+    margin: 15px 0px;
+    width: 282
+    px;
+    height: 35px;
     background-color: #f8f9fa;
     border: 1px solid var(--gray);
 }
 .lenguage-selector .button {
     width: 284px;
-
     display: flex;
     text-decoration: none;
     color: var(--blue-wikipedia);
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-family: sans-serif;
     font-weight: bold;
     justify-items: center;
     align-items: center;
+    justify-content: space-between;
 }
 .button .symbol {
-    padding: 0 10px;
+    padding: 0 8px;
+    justify-self: end;
 }
 .button .arrow {
-    padding: 10px;
+    display: flex;
+    padding: 8px;
+    
 }
+
 .main {
     display: grid;
     width: 100%;
     height: 956px;
     grid-template-rows: auto 1fr 1fr ;
     grid-template-columns: 1fr;
-    margin: 25px auto;
-    padding-top: 10px;
+    margin: 10px auto;
     justify-content: center;
 }
 .main .intro {
@@ -205,7 +210,7 @@ html {
     width: 95%;
     margin-top: 5px;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: var(--font-grey);
     line-height: 20px;
 }
@@ -214,15 +219,18 @@ html {
     text-align: center;
     text-decoration: none;
     color: #36c;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     line-height: 20px;
 }
 .web-apps {
     margin-top: 25px;
+    width: 100%;
     max-width: 480px;
     height: auto;
     display: grid;
-    grid-template-columns: 160px 160px;
+    grid-template-columns: repeat(2, 145px);
+    grid-template-rows: repeat(6, 100px);
+    justify-content: center;
     justify-self: center;
 }
 .web-apps .web-app {
@@ -239,12 +247,12 @@ html {
 }
 .web-app .web-app__title {
     grid: 2;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: var(--blue-wikipedia);
 }
 .web-app .web-app__text {
     grid: 3;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     line-height: 20px;
     color: var(--font-grey);
 }
@@ -258,16 +266,17 @@ html {
     background-color: var(--background-component);
 }
 .download-section__header {
+    margin-top: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .download-section img {
-    width: 60px;
+    width: 50px;
     padding: 5px;
 }
 .download-section h2 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: var(--blue-wikipedia);
 }
 .download-section .download-section__text {
@@ -275,7 +284,7 @@ html {
     margin: 5px;
     padding: 0 10px;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: var(--font-grey);
     line-height: 20px;
 }
