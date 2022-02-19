@@ -1,0 +1,343 @@
+:root {
+    --blue-wikipedia: #36c;
+    --font-grey: #54595d;
+    --gray: #a2a9b1;
+    --white: #ffff;
+    --background-component: #f8f9fa;
+    --font-web: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    font-family: -apple-system,Helvetica,Arial,sans-serif;
+}
+.body {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 551px 995px 1fr;
+
+}
+.header {
+    width: 95%;
+    height: 552px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 100px 49px 318px;
+    justify-items: center;
+    border-bottom: 1px solid var(--gray);
+}
+.header-nav {
+    width: 100%;
+    height: 100%;   
+}
+.logo {
+    margin-block-start: 46px;
+    margin-block-end: 10px;
+    width: 82%;
+    max-width: 220px;
+    height: 52px;
+    display: grid;
+    grid-template-areas: 
+        "icon name"
+        "icon slogan"; 
+    grid-template-rows: 33px 1fr; 
+    grid-template-columns: 1fr 3fr;
+}
+.logo .logo__icon {
+    grid-area: icon;
+    width: 100%;
+    
+}
+.logo .logo__name {
+    width: 90%;
+    justify-self: center;
+    grid-area: name;
+
+}
+.logo .logo__slogan {
+    margin-block-start: -5px;
+    width: 86%;
+    justify-self: center;
+    align-self: flex-start;
+    grid-area: slogan;
+}
+.search-bar {
+    display: flex;
+    width: 98%;
+    height: 44px;
+    max-width: 480px;
+    border: 1px solid #a2a9b1;
+    justify-items: center;
+    align-items: center;
+    border-radius: 3px;
+}
+.input-search {
+    width: 100%;
+    height: 100%;
+    padding: 8px 12px;
+    border: none;
+    font-size: 1.5rem;
+    border: none;
+}
+.search-bar p {
+    font-size: 1.4rem;
+    font-weight: 300;
+    
+}
+.arrow-icon {
+    padding-right: 10px;
+}
+.search-icon {
+    display: flex;
+    width: 86px;
+    height: 100%;
+    background-color: var(--blue-wikipedia);
+}
+.search-icon a {
+    display: flex;
+    width: 100%;
+}
+.search-icon a img {
+    width: 30px;
+    margin: 0 auto;
+}
+
+.search-bar input {
+    outline: unset;
+}
+.search-bar:hover {
+    border: 2px solid var(--blue-wikipedia);    
+}
+
+.primary-links {
+    display: grid;
+    width: 100%;
+    height: 325px;
+    max-width: 480px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, 81px);
+    justify-content: center;
+    justify-items: center;
+    color: var(--font-grey);
+}
+.link {
+    padding: 12px 10px 11px 0px;
+}
+.link p {
+    text-align: center;
+    font-family: var(--font-web)
+    font-size: 1.4rem;
+}
+.link .link-title {
+    margin: 0 0 4px;
+    font-weight: bold;
+    color: var(--blue-wikipedia);
+    font-size: 1.4rem;
+}
+.link-article {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 1.3rem;
+}
+.link-number {
+    padding-top: 3px;
+    padding-right: 5px;
+}
+.link .link-text {
+    font-size: 1.3rem;
+    padding-top: 3px;
+}
+.lenguage-selector {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0px;
+    width: 282
+    px;
+    height: 35px;
+    background-color: #f8f9fa;
+    border: 1px solid var(--gray);
+}
+.lenguage-selector .button {
+    width: 284px;
+    display: flex;
+    text-decoration: none;
+    color: var(--blue-wikipedia);
+    font-size: 1.3rem;
+    font-family: sans-serif;
+    font-weight: bold;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+}
+.button .symbol {
+    padding: 0 8px;
+    justify-self: end;
+}
+.button .arrow {
+    display: flex;
+    padding: 8px;
+    
+}
+
+.main {
+    display: grid;
+    width: 100%;
+    height: 956px;
+    grid-template-rows: auto 1fr 1fr ;
+    grid-template-columns: 1fr;
+    margin: 10px auto;
+    justify-content: center;
+}
+.main .intro {
+    grid: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+.main .intro__icon {
+    width: 50px;
+    height: 50px;
+}
+.main .intro__text {
+    width: 95%;
+    margin-top: 5px;
+    text-align: center;
+    font-size: 1.3rem;
+    color: var(--font-grey);
+    line-height: 20px;
+}
+.main .intro__link {
+    width: 95%;
+    text-align: center;
+    text-decoration: none;
+    color: #36c;
+    font-size: 1.3rem;
+    line-height: 20px;
+}
+.web-apps {
+    margin-top: 25px;
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 145px);
+    grid-template-rows: repeat(6, 100px);
+    justify-content: center;
+    justify-self: center;
+}
+.web-apps .web-app {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 20px 1fr;
+    margin: 20px auto;
+}
+.web-app .web-app__image {
+    grid: 1;
+    grid-row: 1 / 3;
+    width: 60px;
+    padding: 5px;
+}
+.web-app .web-app__title {
+    grid: 2;
+    font-size: 1.3rem;
+    color: var(--blue-wikipedia);
+}
+.web-app .web-app__text {
+    grid: 3;
+    font-size: 1.3rem;
+    line-height: 20px;
+    color: var(--font-grey);
+}
+.download-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-component);
+}
+.download-section__header {
+    margin-top: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.download-section img {
+    width: 50px;
+    padding: 5px;
+}
+.download-section h2 {
+    font-size: 1.3rem;
+    color: var(--blue-wikipedia);
+}
+.download-section .download-section__text {
+    width: 100%;
+    margin: 5px;
+    padding: 0 10px;
+    text-align: center;
+    font-size: 1.3rem;
+    color: var(--font-grey);
+    line-height: 20px;
+}
+.download-section .donwload-section__img-links {
+    width: 80%;
+    display: grid;
+    margin: 8px 0;
+    grid-template-columns: 150px 150px;
+    justify-content: center;
+    align-items: center;
+}
+.donwload-section__img-links .img-link__google-play {
+    display: flex;
+    justify-content: end;
+}
+.donwload-section__img-links .img-link__google-play img {
+    grid-column: 1;
+    width: 90%;
+    max-height: 80px;
+    
+}
+.donwload-section__img-links .img-link__apple-store img {
+    grid-column: 2;
+    width: 80%;  
+}
+.footer {
+    width: 95%;
+    margin: 10px auto;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    font-size: 1.4rem;
+    line-height: 25px;
+    color: var(--font-grey);
+    border-top: 1px solid var(--gray);
+}
+.footer__p1 {
+    line-height: 25px;
+}
+.footer__p2 {
+    color: var(--blue-wikipedia);
+    text-decoration: none;
+    line-height: 20px;
+}
+.footer__links{
+    list-style: circle;
+    color: var(--blue-wikipedia);
+    text-decoration: none;
+    line-height: 25px;
+}
+.hr {
+    width: 90%;
+    margin-top: 20px;
+} 
+
+
